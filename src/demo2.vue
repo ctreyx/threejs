@@ -3,7 +3,7 @@
  * @Date: 2024-06-17 13:54:37
  * @Description: Do not edit
  * @LastEditors: fumi 330696896@qq.com
- * @LastEditTime: 2024-06-19 11:28:20
+ * @LastEditTime: 2024-06-21 14:44:54
  * @FilePath: \threejs\src\demo2.vue
 -->
 <template>
@@ -105,6 +105,7 @@ onMounted(() => {
         }
       }
     });
+ 
 
     scene.add(car);
   });
@@ -164,6 +165,11 @@ const animate = () => {
 const scene = new THREE.Scene();
 
 // 创建相机
+
+// width: 141px;
+//     height: 267px 
+// px
+// ;
 const camera = new THREE.PerspectiveCamera(
   75, //视角，越小看到的范围越小
   window.innerWidth / window.innerHeight, //宽高比
@@ -182,15 +188,15 @@ renderer.toneMappingExposure = 0.85;
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.shadowMap.enabled = true
 // 设置相机位置
-camera.position.set(0, 1, 0);
-camera.lookAt(0, 0, 0);
+// camera.position.set(0, 1, 0);
 
 camera.position.set(
-  0.0011415327852479305,
-  0.030892726029381035,
-  0.1250219140571532
+  -0.0014783048137211813,
+  0.0814861984134159,
+  0.17711794475862197
 );
-
+ 
+ 
 // 渲染出来
 const render = () => {
   renderer.render(scene, camera);
